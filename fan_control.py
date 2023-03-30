@@ -248,7 +248,7 @@ def main():
 def graceful_shutdown(signalnum, frame):
     print("Signal {} received, giving up control".format(signalnum))
     for host in config['hosts']:
-        set_fan_control("automatic", host)
+        set_fan_control("manual", host)
     sys.exit(0)
 
 

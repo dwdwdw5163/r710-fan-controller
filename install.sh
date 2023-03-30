@@ -15,7 +15,7 @@ fi
 echo "*** Installing packaged dependencies..."
 if [ -x "$(command -v apt-get)" ]; then
 	apt-get update
-	apt-get install -y build-essential python3-virtualenv python3-dev libsensors4-dev ipmitool
+	apt-get install -y build-essential python3-dev libsensors4-dev ipmitool
 elif [ -x "$(command -v dnf)" ]; then
 	dnf groupinstall -y "Development Tools"
 	dnf install -y python3-virtualenv python3-devel lm_sensors-devel ipmitool
